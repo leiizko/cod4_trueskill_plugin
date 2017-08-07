@@ -9,6 +9,7 @@ All C++ code is released under AGPL-v3.
 ## Added functions
 ```
 * TS_Rate( <number of teams>, <team rankings> )
+  ! Players must be added with TS_AddPlayer function first !
   - <number of teams>: Integer, number of teams in game, each player counts as a team in FFA mode
   - <team rankings>: String, team placements separated by space. Lower number is better, same numbers is a tie. 
   Needs to be in a specfic order, the string gets tokenized into an array. Array index+1 represents a team. Example:
@@ -21,6 +22,7 @@ All C++ code is released under AGPL-v3.
   Clears all players added by TS_AddPlayer function.
   
 * TS_Quality( <number of teams> )
+  ! Players must be added with TS_AddPlayer function first !
   - <number of teams>: Integer, number of teams in game, each player counts as a team in FFA mode
   Returns a float of game quality ( 0 - 1 ). Multiply by 100 to get percentage of draw chance
   Clears all players added by TS_AddPlayer function.
