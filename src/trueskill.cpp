@@ -135,6 +135,20 @@ void rate( std::vector< std::vector< double > > &T, std::vector< int > &R, int t
 	std::vector< std::vector< double > > org;
 	org = T;
 	sortTeamsByRank( T, R );
+	
+	for ( unsigned int i = 0; i < R.size(); i++ )
+	{
+		for ( unsigned int n = i + 1; n < R.size(); n++ )
+		{
+			if ( R[ i ] > R[ n ] )
+			{
+				int temp = R[ i ];
+				R[ i ] = R[ n ];
+				R[ n ] = temp;
+			}
+		}
+	}
+	
 	unsigned int size = T.size(), index = 0;
 	double ident = T[ 0 ][ 2 ];
 	std::vector< std::vector< Gaussian > > ratings( t );
