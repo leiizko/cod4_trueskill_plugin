@@ -47,7 +47,7 @@ void SV_TSRate()
 	}
 	
 	char *placements = Plugin_Scr_GetString( 1 );
-	char *p = _strdup( placements );
+	char *p = strdup( placements );
 	char *tok;
 	std::vector< int > ranks;
 	
